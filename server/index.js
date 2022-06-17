@@ -45,8 +45,6 @@ console.log('accessed')
 app.use('/allHabits',getRoute)
 app.use('/habit',getOneRoute)
 
- 
-
 
 // post routes
 app.use('/newHabit',postRoute)

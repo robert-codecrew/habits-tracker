@@ -1,11 +1,12 @@
 
 import './App.css';
-
+import Mount from './components/Mount';
+import axios from 'axios';
 function App() {
 
-  const url = process.env.REACT_APP_SERVER_URL || `http://localhost:3001/allhabits`
+  const url = process.env.REACT_APP_SERVER_URL || 'http://localhost:3001'
   const getHabits = async () => {
-    let res = await axios.get(url)
+    let res = await axios.get(`${url}/allhabits`)
 
     return res.data
 
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Habitual
+       <Mount />
       </header>
     </div>
   );
