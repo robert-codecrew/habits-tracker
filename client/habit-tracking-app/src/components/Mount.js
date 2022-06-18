@@ -12,10 +12,7 @@ export default class Mount extends Component {
     return (
      <div id='mount'>
      
-        <header>
-        
-          Habitual
-        </header>  
+       
             <TopPanel/>
         <HabitsContainer/>
         <LeftPanel/>
