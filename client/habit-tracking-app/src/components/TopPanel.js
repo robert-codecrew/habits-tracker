@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import {Button} from 'react-bootstrap';
-import onNewBadHabit from '../eventHandlers/onNewBadHabit'
+
+import HabitChooser from './HabitChooser'
+
 export default class TopPanel extends Component {
   render() {
     return (
       <div id="top-panel">
        <input type='text' />
-        <Button onClick={()=>{onNewBadHabit()}} id = "make-new-habit-button" variant='primary'>
-          New Habit
-        </Button>
+       <HabitChooser buttonTitle='New Habit'  title = 'What would you like to do now?'/>
       </div>
     );
   }

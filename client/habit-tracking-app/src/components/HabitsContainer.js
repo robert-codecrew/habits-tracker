@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
-import HabitChooser from './HabitChooser'
+
 export default class HabitsContainer extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       fucus:false
+    }
+  }
   render() {
     
     return (
       <div id="habits-container">
-          <HabitChooser/>
+     
       </div>
     )
   }

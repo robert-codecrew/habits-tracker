@@ -18,19 +18,20 @@ export default class HabitChooser extends Component {
       <div
    
         id="habit-chooser"
-        style={{ display: "block", width: 700, padding: 30 }}
+      
       >   <Button onClick = {this.setOpen}>{this.props.buttonTitle}</Button>
         
-        <Modal show={this.state.open}>
-          <Modal.Header closeButton>
+        <Modal  show={this.state.open}>
+          <Modal.Header closeButton onClick={this.setOpen}>
             <Modal.Title>{this.props.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-           
+          <Button onClick={this.setOpen} variant="success">Make a new Habit</Button>
+          {" "}
+            <Button onClick = {this.setOpen} variant="danger">Break an old Habit</Button>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.setOpen} variant="primary">Save changes</Button>
-            <Button onClick = {this.setOpen} variant="secondary">Close</Button>
+         
           </Modal.Footer>
         </Modal>
       </div>
