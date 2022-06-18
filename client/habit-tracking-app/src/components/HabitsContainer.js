@@ -4,7 +4,7 @@ export default class HabitsContainer extends Component {
   render() {
     return (
       <div id="habits-container">
-        #habits-container
+  <img src = {process.env.PUBLIC_URL + '/newHabits.png'} alt="habits"/>
       </div>
     )
   }
