@@ -38,9 +38,8 @@ const deleteRoute = require('./routes/deleteHabits')
 
 // get routes
 app.get(root,(req,res)=>{
-res.json({
-    message: 'you have accessed the root',
-})
+
+res.json(req.body)
 console.log('accessed')
 })
 

@@ -6,7 +6,7 @@ const configs = {
     axios: require('axios'),
     express:require('express'),
     cors:require('cors'),
-    mongoose:require('mongoose'),
+     mongoose:require('mongoose'),
     listening: function(port){
        console.log(`listening on ${port}`)
     }

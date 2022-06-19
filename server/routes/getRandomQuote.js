@@ -1,4 +1,5 @@
 'use strict';
+const dataArr = require('../seed')
 const configs = require('../.configuration/config.js');
 
 const {express,axios} = configs;
@@ -10,11 +11,12 @@ router.use((req,res,next)=>{
     console.log('hello world')
     next()
 })
-router.get('/',async(req,res)=>{
-    const url = 'https://zenquotes.io/api/quotes/'
-    let response  = await axios.get(url);
+router.get('/',(req,res)=>{
+    // TODO: Make the API call to randomquotes api
+    // const url = 'https://zenquotes.io/api/quotes/'
+    // let response  = await axios.get(url);
     
-res.send(response.data)
+res.send(dataArr)
 })
 
 
