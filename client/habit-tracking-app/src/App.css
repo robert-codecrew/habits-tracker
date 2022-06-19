@@ -58,7 +58,7 @@
   justify-content: space-around;
   grid-row: 1/15;
   grid-column: 1/2;
-  color: black;
+  color: var(--button_blue);
   background: var(--side_panel_blue);
 }
 #right-panel {
