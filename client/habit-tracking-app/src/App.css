@@ -1,6 +1,14 @@
+/* color variables */
+:root {
+  --main_light: #bbdffa;
+  --side_panel_blue: #97baec;
+  --footer_blue: #445bc1;
+  --button_blue: #1727ae;
+}
+
+/* ____________________ */
 .App {
   text-align: center;
-  
 }
 
 .App-logo {
@@ -15,70 +23,68 @@
 }
 
 #mount {
-  background-color: #ecf1fb;
-  color:rgb(1, 9, 51);
+  background-color: #000;
+  color: rgb(1, 9, 51);
   min-height: 100vh;
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
- 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
   /* font-size: calc(10px + 2vmin); */
+}
+#habits-container {
+  grid-column: 2/6;
+  grid-row: 2/15;
+  display: grid;
+  background: var(--main_light);
+  place-items: center;
+}
 
-}
-#habits-container{
-grid-column:2/6;
-grid-row:2/15;
-display:grid;
-background:black;
-place-items:center;
-}
-
-#top-panel{
-grid-row:1/2;
-grid-column: 2/6;
-display:flex;
-justify-content: space-around;
-flex-direction: row;
-flex-wrap: wrap;
-align-items: center;
-color: beige;
-background: rgb(1, 52, 10);
-}
-#left-panel{
-grid-row:1/15;
-grid-column:1/2;
-color:aqua;
-background: rgb(209, 30, 30);
-
-
-}
-#right-panel{
-grid-row:1/15;
-grid-column:6/8;
-color: #61dafb;
-background: red;
-}
-#bottom-panel{
-grid-row:15/17;
-grid-column:1/7;
-color: beige;
-background: rgb(209, 249, 216);
-}
-#footer{
-  display:flex;
+#top-panel {
+  grid-row: 1/2;
+  grid-column: 2/6;
+  display: flex;
+  border-bottom: 1px solid var(--side_panel_blue);
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-grid-row:17/18;
-grid-column: 1/7;
-color: #ecf1fb;
-background-color:rgb(1, 5, 24);
-
+  color: beige;
+  background: var(--main_light);
 }
-
+#left-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  grid-row: 1/15;
+  grid-column: 1/2;
+  color: black;
+  background: var(--side_panel_blue);
+}
+#right-panel {
+  grid-row: 1/15;
+  grid-column: 6/8;
+  color: black;
+  background: var(--side_panel_blue);
+}
+#bottom-panel {
+  grid-row: 15/17;
+  grid-column: 1/7;
+  color: beige;
+  background: var(--footer_blue);
+}
+#footer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  grid-row: 17/18;
+  grid-column: 1/7;
+  color: #ecf1fb;
+  background-color: rgb(1, 5, 24);
+}
 
 .App-link {
   color: #61dafb;
 }
-
