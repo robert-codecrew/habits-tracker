@@ -21,12 +21,15 @@ const {
 const app = express();
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
-connection()
-// postUser()
 app.use(cors())
+
+// mongoose connection from ./configuration/dbconfigs
+connection()
+
 
 //routes
 const getRoute = require('./routes/getHabits')
+const getRandomQuote = require('./routes/getRandomQuote')
 const getOneRoute = require('./routes/getOneHabit.js')
 const postRoute = require('./routes/postHabits')
 const putRoute = require('./routes/updateHabits')
@@ -44,6 +47,7 @@ console.log('accessed')
 // handlers
 app.use('/allHabits',getRoute)
 app.use('/habit',getOneRoute)
+app.use('/randomquote',getRandomQuote)
 
 
 // post routes
