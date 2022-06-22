@@ -8,11 +8,11 @@ function App() {
   const getHabits = async () => {
     let res = await axios.get(`${url}/allhabits`)
 
-    return res.data
+    return res.data;
 
   }
   getHabits()
-
+      // this is my main component 
   return (
     <div className="App">
       <header className="App-header">
@@ -23,3 +23,4 @@ function App() {
 }
 
 export default App;
+
