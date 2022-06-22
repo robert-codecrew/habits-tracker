@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import HabitChooser from './HabitChooser'
 
+
 export default class TopPanel extends Component {
   render() {
     return (
