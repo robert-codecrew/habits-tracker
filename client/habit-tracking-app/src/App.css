@@ -32,12 +32,11 @@
 
   /* font-size: calc(10px + 2vmin); */
 }
+
 #habits-container {
   grid-column: 2/6;
   grid-row: 2/15;
-  display: grid;
   background: var(--main_light);
-  place-items: center;
 }
 
 #top-panel {
@@ -47,7 +46,7 @@
   border-bottom: 1px solid var(--side_panel_blue);
   justify-content: space-around;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap:wrap-reverse;
   align-items: center;
   color: beige;
   background: var(--main_light);
@@ -55,7 +54,7 @@
 #left-panel {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  
   grid-row: 1/15;
   grid-column: 1/2;
   color: var(--button_blue);
