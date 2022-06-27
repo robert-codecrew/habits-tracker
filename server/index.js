@@ -21,7 +21,7 @@ const {
 const app = express();
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
-connection()
+// connection()
 // postUser()
 app.use(cors())
 
@@ -31,7 +31,8 @@ const getOneRoute = require('./routes/getOneHabit.js')
 const postRoute = require('./routes/postHabits')
 const putRoute = require('./routes/updateHabits')
 const deleteRoute = require('./routes/deleteHabits')
-
+// external api routes
+const getRhymes = require('./routes/apiData/getRhymes')
 
 // get routes
 app.get(root,(req,res)=>{
@@ -44,6 +45,12 @@ console.log('accessed')
 // handlers
 app.use('/allHabits',getRoute)
 app.use('/habit',getOneRoute)
+
+// ____________________________________________________________
+// external api get Routes
+app.use('/rhyme',getRhymes)
+
+// ____________________________________________________________
 
 
 // post routes

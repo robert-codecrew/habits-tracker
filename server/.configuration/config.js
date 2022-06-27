@@ -1,6 +1,7 @@
 require('dotenv').config()
 const configs = {
     port: process.env.PORT || 3030,
+   
     root:'/',
     connectionString: process.env.CONNECTION_STRING,
     axios: require('axios'),
