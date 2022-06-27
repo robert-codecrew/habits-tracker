@@ -2,15 +2,17 @@
 
 const configs = require('../.configuration/config');
 
-const {express, mongoose} = configs;
+const user = require('../models/user');
+
+const {express} = configs;
 
 const router = express.Router();
 
-router.post('/',(req,res)=>{
+router.post('/',async(req,res)=>{
+const newUser = new user(req.body)
+await newUser.save();
 
-res.json({
-    posted:"this item here"
-})    
+res.json(req.body)    
 })
 
 module.exports = router;
