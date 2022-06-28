@@ -12,8 +12,7 @@ router.use((req,res,next)=>{
     next()
 })
 router.get('/',async (req,res)=>{
-    const newHabit = new Habit;
-    await newHabit.find({})
+   
 res.send('hello')
 })
 

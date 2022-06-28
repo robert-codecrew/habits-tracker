@@ -9,8 +9,6 @@ const {express} = configs;
 const router = express.Router();
 
 router.post('/',async(req,res)=>{
-const newUser = new user(req.body)
-await newUser.save();
 
 res.json(req.body)    
 })
