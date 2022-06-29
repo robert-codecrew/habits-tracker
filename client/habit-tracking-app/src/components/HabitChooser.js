@@ -24,7 +24,7 @@ export default class HabitChooser extends Component {
         margin:"10px",
       }}onClick = {this.setOpen}>{this.props.buttonTitle}</Button>
         
-        <Modal  show={this.state.open}>
+        <Modal id = 'habits-modal'  show={this.state.open}>
           <Modal.Header closeButton onClick={this.setOpen}>
             <Modal.Title>{this.props.title}</Modal.Title>
           </Modal.Header>
