@@ -19,7 +19,10 @@ export default class HabitChooser extends Component {
    
         id="habit-chooser"
       
-      >   <Button onClick = {this.setOpen}>{this.props.buttonTitle}</Button>
+      >   <Button style = {{
+        boxShadow:'1px 1px 1px 1px blue',
+        margin:"10px",
+      }}onClick = {this.setOpen}>{this.props.buttonTitle}</Button>
         
         <Modal  show={this.state.open}>
           <Modal.Header closeButton onClick={this.setOpen}>
