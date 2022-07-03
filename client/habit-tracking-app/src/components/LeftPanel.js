@@ -1,30 +1,32 @@
 import React, { Component } from "react";
-import './styles/leftPanel.css'
+import './styles/leftPanel.css';
+import getNewQuote from'../eventHandlers/getNewQuote';
 // import getNewQuote from "../eventHandlers/getNewQuote";
 export default class LeftPanel extends Component {
+constructor(props) {
+  super(props)
 
-  sectionStyle = {
-    display: "flex",
-    flexDirection: "row",
-    margin:'15px',
-    fontSize:'2rem',
-    marginBottom:'2rem',
-    justifyContent: "center",
+  this.state = {
+     quotes:[],
   }
+}
+
+
+
+quoteState = () => {
+const quoteArr = getNewQuote();
+this.setState({quotes:quoteArr})
+console.log(this.state.quotes)
+  }
+
+
+  
   render() {
   //  getNewQuote()
-
+    setInterval(() =>{this.quoteState()},30000)
     return (
       <div id="left-panel">  
-      <section style={this.sectionStyle} id='user'>
-     
-          
-          <span id = 'user-detail'><i class="fa-solid fa-user"></i>Robert Armstrong</span>
-   
-    
-
-      </section>
-      <hr/>
+      
       <section id="quote-section">
         <h5>
       Life is but a series of habits.
