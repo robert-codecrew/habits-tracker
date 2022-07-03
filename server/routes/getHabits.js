@@ -1,8 +1,9 @@
 'use strict';
 const configs = require('../.configuration/config.js');
 
-// const {express,mongoose,} = configs;
-const express = require('express')
+const {express} = configs;
+
+const Habit = require('../models/habit')
 
 const router = express.Router();
 
@@ -10,7 +11,8 @@ router.use((req,res,next)=>{
     console.log('hello world')
     next()
 })
-router.get('/',(req,res)=>{
+router.get('/',async (req,res)=>{
+   
 res.send('hello')
 })
 
