@@ -34,6 +34,7 @@ const getOneRoute = require('./routes/getOneHabit.js')
 const postRoute = require('./routes/postHabits')
 const putRoute = require('./routes/updateHabits')
 const deleteRoute = require('./routes/deleteHabits')
+// external api routes
 
 
 // get routes
@@ -46,7 +47,15 @@ console.log('accessed')
 // handlers
 app.use('/allHabits',getRoute)
 app.use('/habit',getOneRoute)
+
+
+// ____________________________________________________________
+// external api get Routes
 app.use('/randomquote',getRandomQuote)
+
+
+
+// ____________________________________________________________
 
 
 // post routes

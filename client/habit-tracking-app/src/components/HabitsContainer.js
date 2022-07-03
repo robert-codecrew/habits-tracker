@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './styles/habits-container.css';
+import '../styles/habits_container.css'
 export default class HabitsContainer extends Component {
   constructor(props) {
     super(props)

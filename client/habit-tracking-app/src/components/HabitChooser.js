@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button } from "react-bootstrap";
+import { Button,Modal } from "react-bootstrap";
 
 export default class HabitChooser extends Component {
   constructor(props) {
@@ -16,15 +16,29 @@ export default class HabitChooser extends Component {
 
   render() {
     return (
-      <div id="habit-chooser">
-        
-        {this.state.open?
-       
-         <>
-         <Button onClick={()=>alert('new habit good or bad?')} onMouseLeave={this.showSelect}><i class="fa-solid fa-plus"></i>  Add Habits <i class='fa-solid fa-user'></i></Button>
-         </>
 
-        :<> <Button onMouseEnter={this.showSelect}><i class="fa-solid fa-plus"></i> Add Habits </Button></>}
+      <div
+   
+        id="habit-chooser"
+      
+      >   <Button style = {{
+        boxShadow:'1px 1px 1px 1px blue',
+        margin:"10px",
+      }}onClick = {this.setOpen}>{this.props.buttonTitle}</Button>
+        
+        <Modal id = 'habits-modal'  show={this.state.open}>
+          <Modal.Header closeButton onClick={this.setOpen}>
+            <Modal.Title>{this.props.title}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+          <Button onClick={this.setOpen} variant="success">Make a new Habit</Button>
+          {" "}
+            <Button onClick = {this.setOpen} variant="danger">Break an old Habit</Button>
+          </Modal.Body>
+          <Modal.Footer>
+         
+          </Modal.Footer>
+        </Modal>
       </div>
     );
   }
